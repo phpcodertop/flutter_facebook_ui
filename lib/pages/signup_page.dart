@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../pages/login_page.dart';
 import '../widgets/app_button_field.dart';
 import '../widgets/app_input_field.dart';
-import 'feed_page.dart';
+import 'index_page.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -78,7 +78,7 @@ class SignupPage extends StatelessWidget {
                 text: 'Signup',
                 onPress: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const FeedPage(),
+                    builder: (_) => const IndexPage(),
                   ));
                 },
                 color: const Color(0xff0B63E1),

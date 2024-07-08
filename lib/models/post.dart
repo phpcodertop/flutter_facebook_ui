@@ -1,9 +1,10 @@
 class Comment {
   final String content;
   final String author;
+  final String authorImg;
   final String createdAt;
 
-  const Comment({ required this.author, required this.content, required this.createdAt,});
+  const Comment( { required this.authorImg, required this.author, required this.content, required this.createdAt,});
 }
 
 class Post {
@@ -22,5 +23,6 @@ class Post {
     required this.createdAt,
     this.isLiked = false,
     this.imagePath,
+    this.comments,
   });
 }

@@ -1,13 +1,46 @@
 import '../models/post.dart';
 
 class DataSource {
+  static List stories = [
+    {
+      'author': 'Semi Colon',
+      'authorImg': 'assets/profile_picture.jpg',
+      'imagePath': 'assets/post_7.jpg',
+    },
+    {
+      'author': 'Ibrahim Ibn Maher',
+      'authorImg': 'assets/friend_1.jpg',
+      'imagePath': 'assets/post_4.jpg',
+    },
+    {
+      'author': 'دعاء الأنبياء',
+      'authorImg': 'assets/friend_2.jpg',
+      'imagePath': 'assets/post_5.jpg',
+    },
+    {
+      'author': 'Mohammed kamal',
+      'authorImg': 'assets/friend_3.jpg',
+      'imagePath': 'assets/post_6.jpg',
+    },
+    {
+      'author': 'Alaa Mostafa',
+      'authorImg': 'assets/friend_5.jpg',
+      'imagePath': 'assets/post_7.jpg',
+    },
+  ];
+
   static List<Post> posts = [
     Post(
-      content: 'اللهم اكتب لى الخير فيما تراه خيرا لى',
+      content: 'اللهم اكتب لى الخير حيث كان',
       author: 'Semi Colon',
       createdAt: 'June 24 at 1:39PM',
       authorImg: 'assets/profile_picture.jpg',
       imagePath: 'assets/post_7.jpg',
+      comments: [
+        const Comment(author: 'Semi Colon', content: 'اللهم امين', createdAt: 'June 24 at 1:39PM', authorImg: 'assets/profile_picture.jpg', ),
+        const Comment(author: 'Semi Colon', content: 'Ameen', createdAt: 'June 24 at 1:39PM', authorImg: 'assets/profile_picture.jpg'),
+        const Comment(author: 'دعاء الانبياء', content: 'امين', createdAt: 'June 24 at 1:39PM', authorImg: 'assets/profile_picture.jpg'),
+      ],
     ),
     Post(
       content: '" اللهم اجعلني في عنايتك، فلا يضرني بشر ، ولا يبكيني قدر "',

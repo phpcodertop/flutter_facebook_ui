@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/feed_page.dart';
+import '../pages/index_page.dart';
 import '../pages/signup_page.dart';
 
 import '../widgets/app_button_field.dart';
@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
                 text: 'Login',
                 onPress: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const FeedPage(),
+                    builder: (_) => const IndexPage(),
                   ));
                 },
                 color: const Color(0xff0B63E1),
