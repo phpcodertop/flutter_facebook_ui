@@ -61,7 +61,7 @@ class HomeFeed extends StatelessWidget {
                         authorName: e['author'],
                         authorImage: e['authorImg'],
                         storyImage: e['imagePath']),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -84,9 +84,9 @@ class HomeFeed extends StatelessWidget {
               isLiked: post.isLiked,
             ),
           ),
-
-          const SizedBox(height: 50,),
-
+      
+          // const SizedBox(height: 50,),
+      
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:auto_direction/auto_direction.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart' as Intl;
 import 'package:readmore/readmore.dart';
 
 import '../models/post.dart';
@@ -84,10 +85,11 @@ class AppFeedPost extends StatelessWidget {
         // text
         Padding(
           padding: const EdgeInsets.all(10),
-          child: AutoDirection(
-            text: content,
+          child: Align(
+            alignment: Intl.Bidi.hasAnyRtl(content) ? Alignment.topRight : Alignment.topLeft,
             child: ReadMoreText(
               content,
+              textAlign: Intl.Bidi.hasAnyRtl(content) ? TextAlign.right : TextAlign.left,
             ),
           ),
         ),
@@ -203,7 +205,7 @@ class AppFeedPost extends StatelessWidget {
           ),
         ),
 
-        Divider(
+        const Divider(
           color: Colors.grey,
           thickness: 3,
         ),
